@@ -1,0 +1,31 @@
+
+package:
+  name: sackmesser
+  version: "{{ load_setup_py_data().version }}"
+
+build:
+  noarch: python
+  script: python setup.py install
+  entry_points:
+    - smhoi = sackmesser:hello
+
+source:
+  path: ..
+
+requirements:
+  build:
+    - python 
+
+  run:
+    - python
+
+
+test:
+  imports:
+    - sackmesser
+
+about:
+  home: https://github.com/slsdetectorgroup/hdf5maker
+  license: GPL3
+  license_family: GPL
+  summary: Raw to hdf5 converter for PSI Eiger detector
