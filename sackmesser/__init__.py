@@ -1,4 +1,5 @@
 
+import sys
 
-def hello():
-    print('Hoi')
+from .renaming import rename_trimbits
+

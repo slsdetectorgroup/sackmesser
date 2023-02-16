@@ -7,7 +7,7 @@ build:
   noarch: python
   script: python setup.py install
   entry_points:
-    - smhoi = sackmesser:hello
+    - rename_trimbits = sackmesser.main:rename_trimbits
 
 source:
   path: ..
@@ -18,6 +18,7 @@ requirements:
 
   run:
     - python
+    - rich
 
 
 test:
@@ -26,6 +27,6 @@ test:
 
 about:
   home: https://github.com/slsdetectorgroup/hdf5maker
-  license: GPL3
-  license_family: GPL
-  summary: Raw to hdf5 converter for PSI Eiger detector
+  license: MIT
+  license_family: MIT
+  summary: Python utils for PSD Detector Group detectors
